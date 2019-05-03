@@ -37,7 +37,6 @@ Goto End
 :No
 echo ----NO CIERRES EL SCRIPT MIENTRAS DURA LA GRABACION----
 
-echo El equipo esperara 5 minutos y una vez terminada la grabacion se apagara.
 echo La grabacion comenzara en %esperamin% minutos.
 ping -n %esperaseg% 127.0.0.1 > nul 
 echo Comenzando grabacion...
