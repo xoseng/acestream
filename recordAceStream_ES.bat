@@ -23,7 +23,7 @@ set esperaseg=%esperamin%*60
 echo
 echo Cuantos minutos quieres que dure la grabacion?
 set /p tiempograbmin=
-echo lagrabacion durara %tiempograbmin% minutos.
+echo la grabacion durara %tiempograbmin% minutos.
 set tiempograbseg=%tiempograbmin%*60
 echo
 Choice /M "Quieres apagar el equipo una vez terminada la grabacion?"
