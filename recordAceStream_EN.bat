@@ -1,6 +1,6 @@
 @echo off 
 echo ---------------------------------------------------- 
-echo -------------SCRIPT RECORDING ACESTREAM-------------
+echo -------------RECORDING ACESTREAM SCRIPT-------------
 echo ----------------------------------------------------
 echo
 echo Set a file name:
@@ -45,7 +45,8 @@ ping -n 300 127.0.0.1 > nul
 Goto End
 
 :Yes
-echo ----DON'T CLOSE THE SCRIPT WHILE RECORDING ON----
+echo ----DON'T CLOSE THE SCRIPT WHILE RECORDING ON----
+
 echo The computer will wait about 5 minutes and once the recording is done it will shutdown.
 echo The recording starts in %esperamin% minutes.
 ping -n %esperaseg% 127.0.0.1 > nul 
