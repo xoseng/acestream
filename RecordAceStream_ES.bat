@@ -35,7 +35,8 @@ If Errorlevel 1 Goto Yes
 Goto End
 
 :No
-echo ----NO CIERRES EL SCRIPT MIENTRAS DURA LA GRABACION----
+echo ----NO CIERRES EL SCRIPT MIENTRAS DURA LA GRABACION----
+
 echo El equipo esperara 5 minutos y una vez terminada la grabacion se apagara.
 echo La grabacion comenzara en %esperamin% minutos.
 ping -n %esperaseg% 127.0.0.1 > nul 
@@ -46,13 +47,14 @@ ping -n 300 127.0.0.1 > nul
 Goto End
 
 :Yes
-echo ----NO CIERRES EL SCRIPT MIENTRAS DURA LA GRABACION----
+echo ----NO CIERRES EL SCRIPT MIENTRAS DURA LA GRABACION----
+
 echo El equipo esperara 5 minutos y una vez terminada la grabacion se apagara.
 echo La grabacion comenzara en %esperamin% minutos.
 ping -n %esperaseg% 127.0.0.1 > nul 
 echo Comenzando grabacion...
 %pathacestream% %enlace% --sout=#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128,deinterlace}:standard{access=file,mux=ts,dst="%ruta%%nombre%.mpg"} --run-time=%tiempograbseg% --stop-time=%tiempograbseg% vlc://quit
-echo En 5 minutos se apagará el equipo...
+echo En 5 minutos se apagara el equipo...
 shutdown -s -t 300
 
 :End
